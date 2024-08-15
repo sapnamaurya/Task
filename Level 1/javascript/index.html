@@ -13,7 +13,8 @@
         background: black;
         color: white;
       }
-      button {
+      .change {
+        width: 10%;
         background-color: black;
         color: white;
         font-size: 21px;
@@ -83,7 +84,9 @@
 its color when clicked using
 JavaScript. -->
 
-    <div><button id="change" onClick="changeColor()">Color</button></div>
+    <div>
+      <p class="change" id="changes" onClick="changeColor()">colorChange</p>
+    </div>
     <script src="./script.js"></script>
 
     <script>
@@ -101,14 +104,12 @@ JavaScript. -->
           "According to cuurent time = Good Afternoon";
       } else {
         document.getElementById("demo").innerHTML =
-          " According to cuurent time =Good Evening";
+          " According to cuurent time = Good Evening";
       }
 
       let input = document.getElementById("input-cont");
       let buttons = document.querySelectorAll("button");
-
       let string = "";
-
       let arr = Array.from(buttons);
       arr.forEach((button) => {
         button.addEventListener("click", (e) => {
@@ -127,10 +128,10 @@ JavaScript. -->
           }
         });
       });
-      let result = document.getElementById("change");
+      let result = document.getElementById("changes");
       function changeColor() {
-        document.getElementById("change").style.backgroundColor = "white";
-        document.getElementById("change").style.color = "black";
+        document.getElementById("changes").style.backgroundColor = "white";
+        document.getElementById("changes").style.color = "black";
         console.log(changeColor);
       }
     </script>
