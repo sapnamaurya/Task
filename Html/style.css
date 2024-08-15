@@ -1,0 +1,60 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.main-sec {
+  border: 1px solid black;
+
+  background: #efece7;
+}
+.nav-bar {
+  display: flex;
+  align-items: center;
+  border: 1px solid black;
+  height: 6%;
+  background-color: black;
+}
+.nav-bar a {
+  margin: 0 3%;
+  font-size: 20px;
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  padding: 6px;
+}
+.nav-bar a:hover {
+  background-color: green;
+  color: white;
+}
+.main-sec .para {
+  margin: auto;
+
+  font-size: 18px;
+  border: 1px solid black;
+  padding: 16px;
+  color: white;
+  background: black;
+  line-height: 2;
+}
+.para img {
+  margin: 13px;
+  width: 40%;
+  float: right;
+}
+.sections {
+  margin: 1%;
+}
+.sections input {
+  background: #e9dddd;
+  padding: 4px;
+  color: black;
+  font-weight: bold;
+}
+button {
+  width: 78px;
+  padding: 5px;
+  font-weight: bold;
+  background: grey;
+  color: white;
+}
