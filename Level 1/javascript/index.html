@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>javascript</title>
+    <style>
+      p {
+        font-size: 21px;
+        font-weight: bold;
+        padding: 20px;
+        border: 1px solid black;
+        background: black;
+        color: white;
+      }
+      button {
+        background-color: black;
+        color: white;
+        font-size: 21px;
+        font-weight: bold;
+        padding: 20px;
+      }
+
+      .input {
+        width: 33%;
+        height: 4vh;
+      }
+      .button-cont1 button {
+        width: 109px;
+        background-color: black;
+        color: white;
+        font-size: 21px;
+        font-weight: bold;
+        padding: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Create an alert box that displays a greeting message based on the current time using JavaScript. -->
+    <p id="demo">Greeting</p>
+
+    <!--  -->
+    <div>
+      <div class="cal-cont">
+        <input type="text" class="input" placeholder="0" id="input-cont" />
+        <div class="button-cont1">
+          <button class="btn-color">AC</button>
+          <button class="btn-color">Del</button>
+          <button class="btn-color">%</button>
+          <button class="btn-color">/</button>
+        </div>
+
+        <div class="button-cont1">
+          <button>7</button>
+          <button>8</button>
+          <button>9</button>
+          <button class="btn-color">*</button>
+        </div>
+
+        <div class="button-cont1">
+          <button>4</button>
+          <button>5</button>
+          <button>6</button>
+          <button class="btn-color">-</button>
+        </div>
+
+        <div class="button-cont1">
+          <button>1</button>
+          <button>2</button>
+          <button>3</button>
+          <button class="btn-color">+</button>
+        </div>
+
+        <div class="button-cont1">
+          <button>00</button>
+          <button>0</button>
+          <button>.</button>
+          <button class="btn-clr">=</button>
+        </div>
+      </div>
+    </div>
+    <!-- Develop a basic button that changes
+its color when clicked using
+JavaScript. -->
+
+    <div><button id="change" onClick="changeColor()">Color</button></div>
+    <script src="./script.js"></script>
+
+    <script>
+      var today = new Date();
+      console.log(today);
+      var curHr = today.getHours();
+      if (curHr >= 0 && curHr <= 6) {
+        document.getElementById("demo").innerHTML =
+          " According to cuurent time = What are you doing that early?";
+      } else if (curHr >= 6 && curHr <= 12) {
+        document.getElementById("demo").innerHTML =
+          "According to cuurent time = Good Morning";
+      } else if (curHr >= 12 && curHr < 17) {
+        document.getElementById("demo").innerHTML =
+          "According to cuurent time = Good Afternoon";
+      } else {
+        document.getElementById("demo").innerHTML =
+          " According to cuurent time =Good Evening";
+      }
+
+      let input = document.getElementById("input-cont");
+      let buttons = document.querySelectorAll("button");
+
+      let string = "";
+
+      let arr = Array.from(buttons);
+      arr.forEach((button) => {
+        button.addEventListener("click", (e) => {
+          if (e.target.innerHTML == "=") {
+            string = eval(string);
+            input.value = string;
+          } else if (e.target.innerHTML == "AC") {
+            string = "";
+            input.value = string;
+          } else if (e.target.innerHTML == "Del") {
+            string = string.substring(0, string.length - 1);
+            input.value = string;
+          } else {
+            string += e.target.innerHTML;
+            input.value = string;
+          }
+        });
+      });
+      let result = document.getElementById("change");
+      function changeColor() {
+        document.getElementById("change").style.backgroundColor = "white";
+        document.getElementById("change").style.color = "black";
+        console.log(changeColor);
+      }
+    </script>
+  </body>
+</html>
