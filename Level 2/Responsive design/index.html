@@ -1,9 +1,112 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
-    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      .menu {
+        float: left;
+        width: 20%;
+      }
+      .menuitem {
+        padding: 8px;
+        margin-top: 7px;
+        border-bottom: 1px solid #f1f1f1;
+      }
+      .main {
+        float: left;
+        width: 60%;
+        padding: 0 20px;
+        overflow: hidden;
+      }
+      .right {
+        background-color: lightblue;
+        float: left;
+        width: 20%;
+        padding: 10px 15px;
+        margin-top: 7px;
+      }
+
+      @media only screen and (max-width: 800px) {
+        /* For tablets: */
+        .main {
+          width: 80%;
+          padding: 0;
+        }
+        .right {
+          width: 100%;
+        }
+      }
+      @media only screen and (max-width: 500px) {
+        /* For mobile phones: */
+        .menu,
+        .main,
+        .right {
+          width: 100%;
+        }
+      }
+    </style>
   </head>
-  <body></body>
+  <body style="font-family: Verdana">
+    <div style="background-color: #f1f1f1; padding: 15px">
+      <h1>The Engineer</h1>
+      <h3>About Engineering</h3>
+    </div>
+
+    <div style="overflow: auto">
+      <div class="menu">
+        <div class="menuitem">The Walk</div>
+        <div class="menuitem">What</div>
+        <div class="menuitem">W</div>
+        <div class="menuitem">Gallery</div>
+      </div>
+
+      <div class="main">
+        <h2>The Walk</h2>
+        <p>
+          The walk from Monterosso to Riomaggiore will take you approximately
+          two hours, give or take an hour depending on the weather conditions
+          and your physical shape.
+        </p>
+        <img src="./image/eng.jpg" style="width: 100%" />
+      </div>
+
+      <div class="right">
+        <h2>What?</h2>
+        <p>
+          a person specially trained to design and build machines, structures,
+          and other things, including bridges, roads, vehicles, and buildings:
+          He is an engineer at a large electronics company.
+        </p>
+        <h2>Where?</h2>
+        <p>
+          Engineers, as practitioners of engineering, are professionals who
+          invent, design, analyze, build and test machines, complex systems,
+          structures, gadgets and materials
+        </p>
+        <h2>Salary?</h2>
+        <p>
+          Engineer salary in India ranges between ₹ 2.2 Lakhs to ₹ 12.0 Lakhs
+          with an average annual salary of ₹ 5.8 Lakhs. Salary estimates are
+          based on 1.4L latest salaries received from Engineers.
+        </p>
+      </div>
+    </div>
+
+    <div
+      style="
+        background-color: #f1f1f1;
+        text-align: center;
+        padding: 10px;
+        margin-top: 7px;
+        font-size: 12px;
+      "
+    >
+      This web page is a part of a demonstration of fluid web design made by
+      w3schools.com. Resize the browser window to see the content respond to the
+      resizing.
+    </div>
+  </body>
 </html>
